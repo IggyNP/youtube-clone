@@ -34,8 +34,6 @@ const Feed = () => {
         >
           Copyright 2023 IggyNP
         </Typography>
-
-        <Videos videos={videos} />
       </Box>
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography
@@ -46,6 +44,7 @@ const Feed = () => {
         >
           {selectedCategory} <span style={{ color: "#F31503" }}>Videos</span>
         </Typography>
+        <Videos videos={videos} />
       </Box>
     </Stack>
   );
