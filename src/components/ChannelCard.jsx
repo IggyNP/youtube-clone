@@ -31,7 +31,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
         >
           <CardMedia
             image={
-              channelDetail?.snippet?.thumbnails?.high?.url ||
+              channelDetail?.snippet?.thumbnails?.default?.url ||
               demoProfilePicture
             }
             alt={channelDetail?.snippet?.title}
