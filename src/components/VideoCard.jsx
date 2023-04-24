@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Typography, Card, CardContent, CardMedia } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
+import he from "he";
 
 import {
   demoThumbnailUrl,
@@ -34,7 +35,8 @@ const VideoCard = ({
       <CardContent sx={{ backgroundColor: "#1e1e1e", height: 106 }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
           <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
-            {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
+            {he.decode(snippet?.title).slice(0, 60) ||
+              demoVideoTitle.slice(0, 60)}
           </Typography>
         </Link>
         <Link
